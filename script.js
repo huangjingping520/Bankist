@@ -30,24 +30,32 @@ document.addEventListener('keydown', function (e) {
   }
 })
 
-const message = document.createElement('div')
-message.classList.add('cookie-message')
-// message.textContent = 'We use cookied for improved functionality and analytics.'
-message.innerHTML = 'We use cookied for improved functionality and analytics.<button class="btn btn--close-cookie">Got it!</button>'
+// const message = document.createElement('div')
+// message.classList.add('cookie-message')
+// // message.textContent = 'We use cookied for improved functionality and analytics.'
+// message.innerHTML = 'We use cookied for improved functionality and analytics.<button class="btn btn--close-cookie">Got it!</button>'
 
-const header = document.querySelector('.header')
+// const header = document.querySelector('.header')
 
-header.append(message)
+// header.append(message)
 
-document.querySelector('.btn--close-cookie').addEventListener('click', function () {
-  message.remove()
+// document.querySelector('.btn--close-cookie').addEventListener('click', function () {
+//   message.remove()
+// })
+
+// message.style.backgroundColor = '#37383d'
+
+// message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px'
+
+// document.documentElement.style.setProperty('--color-primary', 'orangered')
+
+// const logo = document.querySelector('.nav__logo')
+// console.log(logo)
+
+const btnScrollTo = document.querySelector('.btn--scroll-to')
+const section1 = document.querySelector('#section--1')
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect()
+
+  window.scrollTo(s1coords.left, s1coords.top)
 })
-
-message.style.backgroundColor = '#37383d'
-
-message.style.height = Number.parseFloat(getComputedStyle(message).height, 10) + 30 + 'px'
-
-document.documentElement.style.setProperty('--color-primary', 'orangered')
-
-const logo = document.querySelector('.nav__logo')
-console.log(logo)
