@@ -30,6 +30,38 @@ document.addEventListener('keydown', function (e) {
   }
 })
 
+const btnScrollTo = document.querySelector('.btn--scroll-to')
+const section1 = document.querySelector('#section--1')
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect()
+
+  // window.scrollTo(s1coords.left + window.pageXOffset, s1coords.top + window.pageYOffset)
+
+  // window.scrollTo({
+  //   left: s1coords.left + window.pageXOffset,
+  //   top: s1coords.top + window.pageYOffset,
+  //   behavior: 'smooth'
+  // })
+
+  section1.scrollIntoView({ behavior: 'smooth' })
+})
+
+// Page Navigation
+
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault()
+//     document.querySelector(el.hash).scrollIntoView({ behavior: 'smooth' })
+//   })
+// })
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault()
+  if (e.target.classList.contains('nav__link')) {
+    document.querySelector(e.target.hash).scrollIntoView({ behavior: 'smooth' })
+  }
+})
+
 // const message = document.createElement('div')
 // message.classList.add('cookie-message')
 // // message.textContent = 'We use cookied for improved functionality and analytics.'
@@ -51,19 +83,3 @@ document.addEventListener('keydown', function (e) {
 
 // const logo = document.querySelector('.nav__logo')
 // console.log(logo)
-
-const btnScrollTo = document.querySelector('.btn--scroll-to')
-const section1 = document.querySelector('#section--1')
-btnScrollTo.addEventListener('click', function (e) {
-  const s1coords = section1.getBoundingClientRect()
-
-  // window.scrollTo(s1coords.left + window.pageXOffset, s1coords.top + window.pageYOffset)
-
-  // window.scrollTo({
-  //   left: s1coords.left + window.pageXOffset,
-  //   top: s1coords.top + window.pageYOffset,
-  //   behavior: 'smooth'
-  // })
-
-  section1.scrollIntoView({ behavior: 'smooth' })
-})
