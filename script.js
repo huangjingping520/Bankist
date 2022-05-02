@@ -100,6 +100,7 @@ nav.addEventListener('mouseover', handleHover.bind(0.5))
 nav.addEventListener('mouseout', handleHover.bind(1))
 
 
+
 // const message = document.createElement('div')
 // message.classList.add('cookie-message')
 // // message.textContent = 'We use cookied for improved functionality and analytics.'
