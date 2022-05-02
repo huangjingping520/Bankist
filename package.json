@@ -1,0 +1,24 @@
+{
+  "name": "bankist",
+  "version": "1.0.0",
+  "description": "a demo",
+  "main": "script.js",
+  "scripts": {
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/huangjingping520/Bankist.git"
+  },
+  "author": "MerlinAlex (HJP)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/huangjingping520/Bankist/issues"
+  },
+  "homepage": "https://github.com/huangjingping520/Bankist#readme",
+  "devDependencies": {
+    "@antfu/eslint-config": "^0.22.0",
+    "eslint": "^8.14.0"
+  }
+}
